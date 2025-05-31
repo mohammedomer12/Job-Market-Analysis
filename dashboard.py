@@ -4,7 +4,7 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 
 # Load dataset
-df = pd.read_csv('D:/ML_practice/jobdataset.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/mohammedomer12/Job-Market-Analysis/main/jobdataset.csv')
 
 # Streamlit app title
 st.title('Job Market Analysis Dashboard')
