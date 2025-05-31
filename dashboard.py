@@ -2,9 +2,18 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
-
+import requests
 # Load dataset
-df = pd.read_csv('https://raw.githubusercontent.com/mohammedomer12/Job-Market-Analysis/main/jobdataset.csv')
+url = "https://raw.githubusercontent.com/mohammedomer12/Job-Market-Analysis/main/jobdataset.csv"
+
+try :
+    response = requests.get(url)
+    response.raise_for_status()
+    df = pd.read_csv(pd.compat.StringIO(response.text))
+    print("✅ Dataset Loaded Successfully!")
+except Exception as e:
+    print(f"❌ Error loading dataset: {e}")
+
 
 # Streamlit app title
 st.title('Job Market Analysis Dashboard')
