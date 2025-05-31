@@ -3,13 +3,14 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 import requests
+import io
 # Load dataset
 url = "https://raw.githubusercontent.com/mohammedomer12/Job-Market-Analysis/main/jobdataset.csv"
 
 try :
     response = requests.get(url)
     response.raise_for_status()
-    df = pd.read_csv(pd.compat.StringIO(response.text))
+    df = pd.read_csv(io.StringIO(response.text))
     print("✅ Dataset Loaded Successfully!")
 except Exception as e:
     print(f"❌ Error loading dataset: {e}")
