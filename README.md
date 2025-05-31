@@ -6,6 +6,7 @@ This project presents an exploratory data analysis of job postings focused on da
 
 * **Jupyter Notebook**: A detailed step-by-step exploration with data inspection, visualizations, and insights.
 * **Streamlit App**: A clean, interactive dashboard showcasing the core visuals and key insights without filters or sidebars, aimed at easy consumption of results.
+* `https://job-market-dash.streamlit.app/`
 
 ---
 
